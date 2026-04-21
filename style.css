@@ -1,70 +1,138 @@
-html,
-body {
-  margin: 0;
+html,                                                                                                                                                    
+body {                                                                                                                                                   
+  margin: 0;                                                                                                                                             
   padding: 0;
-}
-
-.main-header {
-  background-color: rgba(0, 0, 0, 0.3);
+}                                                                                                                                                        
+                                            
+body {                                                                                                                                                   
+  background-color: #e8e8e8;
+}                                                                                                                                                        
+  
+.main-header {                                                                                                                                           
+  background-color: #333;
   padding-bottom: 10px;
-}
-
+}                                           
+                                        
 .title {
-  text-align: center;
-  margin: 0;
-  font-size: 8em;
-  font-family: "Helvetica";
-  font-weight: normal;
-  color: white;
-}
-
-#card-container {
-  display: flex;
-  justify-content: center;
-  margin: 20px;
-}
-
-.card {
-  width: 300px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  margin: 5px;
-}
-
-.card-content {
-  padding: 20px;
-  font-family: "Verdana";
-  color: #777;
-}
-
-.card-content h2 {
-  margin-top: 0;
-  font-size: 20px;
-}
-
-.card img {
-  width: 100%;
-  height: auto;
-}
-
-.footer {
-  display: flex;
-  justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 10px;
-}
-
-button {
-  text-align: center;
-  background-color: #666;
-  border: none;
-  padding-left: 10px;
-  padding-right: 10px;
-  height: 40px;
+  text-align: center;                   
+  margin: 0;                                                                                                                                             
+  padding: 20px 0;                                                                                                                                       
+  font-size: 5em;                                                                                                                                        
+  font-family: "Helvetica";                                                                                                                              
+  font-weight: normal;                                                                                                                                   
+  color: white; 
+}                                                                                                                                                        
+                                            
+.controls {                                                                                                                                              
+  background-color: white;
   border-radius: 10px;
-  color: white;
-  font-size: 22px;
-  cursor: pointer;
-  margin: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  padding: 12px 20px;                                                                                                                                    
+  margin: 20px auto;                       
+  max-width: 700px;                                                                                                                                      
+  display: flex;                              
+  flex-direction: column;                                                                                                                                
+  gap: 10px;
+  font-family: "Verdana";                                                                                                                              
+}                                           
+                                        
+.control-row {
+  display: flex;                                                                                                                                         
+  justify-content: center;
+  align-items: center;                                                                                                                                   
+  gap: 12px;    
+  flex-wrap: wrap;
 }
+
+.control-label {
+  font-weight: bold;
+  color: #333;                              
+  font-size: 15px;                      
+}
+                                                                                                                                                          
+.controls select {
+  font-size: 14px;                                                                                                                                       
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;                   
+  cursor: pointer;                      
+  background-color: white;
+}                                                                                                                                                        
+
+button {                                                                                                                                                 
+  text-align: center;
+  background-color: white;
+  border: 1px solid #888;
+  padding: 5px 14px;                        
+  border-radius: 5px;                   
+  color: #333;
+  font-size: 14px;                                                                                                                                       
+  cursor: pointer;
+}                                                                                                                                                        
+                
+button.reversed {
+  background-color: #888;
+  color: white;                             
+}                                       
+
+#card-container {                                                                                                                                        
+  display: flex;
+  flex-wrap: wrap;                                                                                                                                       
+  justify-content: center;
+  margin: 20px;                             
+  gap: 10px;                            
+}
+                                                                                                                                                          
+.card {
+  width: 300px;                                                                                                                                          
+  height: 450px;                            
+  border: 1px solid #ccc;               
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);                                                                                                              
+  margin: 5px;                          
+  overflow: hidden;                                                                                                                                      
+  background-color: white;                                                                                                                               
+}                                       
+                                                                                                                                                          
+.card-content {                                                                                                                                          
+  position: relative;
+  padding: 20px;                                                                                                                                         
+  font-family: "Verdana";
+  color: #777;                              
+}                                       
+
+.card-content h2 {                                                                                                                                       
+  margin-top: 0;
+  font-size: 20px;                                                                                                                                       
+}               
+                                            
+.card img {                             
+  width: 100%;
+  height: 200px;                                                                                                                                         
+  object-fit: cover;
+}             
+
+  .star-btn {     
+  position: absolute;                                                                                                                                    
+  top: 10px;    
+  right: 10px;                                                                                                                                           
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;                   
+  border-radius: 50%;                   
+  width: 36px;
+  height: 36px;                                                                                                                                          
+  font-size: 18px;
+  cursor: pointer;                                                                                                                                       
+  color: #888;                              
+  padding: 0;                           
+  z-index: 1;
+}                                                                                                                                                        
+
+.star-btn.starred {                                                                                                                                      
+  color: #ffb400;
+  border-color: #ffb400;
+}  
+                                                                                                                                                                                               
+.card-content p strong {                                                                                                                                 
+  color: #333;
+}  

@@ -1,31 +1,55 @@
-<!doctype html>
-<html>
-  <head>
-    <title>LA TV Shows | Home</title>
-    <meta name="description" content="A Catalog of Shows Set in Los Angeles" />
-    <link rel="stylesheet" href="style.css" />
+<!doctype html>                         
+<html>                                                                                                                                                   
+  <head>                                                                                                                                                 
+    <title>Tourist Destinations | Home</title>                                                                                                           
+    <meta name="description" content="A Catalog of Major City Tourist Destinations" />                                                                   
+    <link rel="stylesheet" href="style.css" />                                                                                                           
     <script type="text/javascript" src="scripts.js"></script>
-  </head>
-
+  </head>                                                                                                                                                
   <body>
-    <header class="main-header">
-      <h1 class="title">LA TV Shows</h1>
-    </header>
-    <div id="card-container"></div>
-    <div class="card" style="display: none">
-      <div class="card-content">
-        <h2>TV Show Title</h2>
-        <img src="" alt="TV Show Poster" />
-        <ul>
-          <li>Bullet Point 1</li>
-          <li>Bullet Point 2</li>
-          <li>Bullet Point 3</li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer">
-      <button onclick="quoteAlert()">Get A Quote!</button>
-      <button onclick="removeLastCard()">Remove A Card!</button>
-    </div>
-  </body>
+    <header class="main-header">                                                                                                                         
+      <h1 class="title">Tourist Destinations</h1>
+    </header>                                                                                                                                            
+    <div class="controls">              
+      <div class="control-row">
+        <span class="control-label">Filter by Continent:</span>                                                                                          
+        <select onchange="filterByContinent(this.value)">
+          <option value="all">All</option>                                                                                                               
+          <option value="Africa">Africa</option>
+          <option value="Asia">Asia</option>                                                                                                             
+          <option value="Europe">Europe</option>
+          <option value="North America">North America</option>                                                                                           
+          <option value="South America">South America</option>
+          <option value="Oceania">Oceania</option>                                                                                                       
+        </select>                           
+        <span class="control-label">Filter by Season:</span>                                                                                             
+        <select onchange="filterBySeason(this.value)">
+          <option value="all">All</option>                                                                                                               
+          <option value="Spring">Spring</option>
+          <option value="Summer">Summer</option>                                                                                                         
+          <option value="Fall">Fall</option>
+          <option value="Winter">Winter</option>
+        </select>                                                                                                                                        
+      </div>                                
+      <div class="control-row">                                                                                                                          
+        <span class="control-label">Sort by:</span>
+        <button id="name-btn" onclick="nameList()">Name</button>                                                                                         
+        <button id="country-btn" onclick="countryList()">Country</button>
+        <button id="price-btn" onclick="priceList()">Cost</button> 
+        <button id="fav-view-btn" onclick="toggleFavoritesView()">Show Favorites</button>                                                                                     
+      </div>    
+    </div>                                                                                                                                               
+    <div id="card-container"></div>     
+    <div class="card" style="display: none">                                                                                                             
+        <div class="card-content">                                                                                                                         
+          <button class="star-btn">☆</button>                                                                                                              
+          <h2>TV Show Title</h2>          
+          <img src="" alt="TV Show Poster" />                                                                                                              
+          <p><strong>Country:</strong> <span class="info-country"></span></p>                                                                              
+          <p><strong>Continent:</strong> <span class="info-continent"></span></p>
+          <p><strong>Cost:</strong> <span class="info-cost"></span></p>                                                                                    
+          <p><strong>Best Season:</strong> <span class="info-season"></span></p>
+        </div>                                                                                                                                             
+      </div>        
+  </body>                                                                                                                                                
 </html>
