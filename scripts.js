@@ -417,7 +417,7 @@ const cities = [
   },
 ];
 
-// Favorites
+// Favorites Tab
 let favorites = [];
 let showingFavoritesOnly = false;
 
